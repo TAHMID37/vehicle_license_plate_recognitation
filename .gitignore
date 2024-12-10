@@ -1,0 +1,4 @@
+models/
+runs/
+Vehicle License Plate Detection.v1i.yolov8/
+*.ipynb_checkpoints/
