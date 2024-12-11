@@ -20,5 +20,3 @@ class VehicleRegistration(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     license_plate = Column(String, unique=True, nullable=False)
-    owner_name = Column(String, nullable=False)
-    contact_info = Column(String, nullable=True)
