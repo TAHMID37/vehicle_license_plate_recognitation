@@ -54,7 +54,7 @@ async def process_vehicle_endpoint(
 def register_vehicle_in_db(db: Session, license_plate: str):
     existing_vehicle = db.query(VehicleRegistration).filter_by(license_plate=license_plate).first()
     if existing_vehicle:
-        return {"error": f"Vehicle {license_plate} is already registered"}
+        return {"message": f"Vehicle {license_plate} is already registered"}
     new_vehicle = VehicleRegistration(license_plate=license_plate)
     db.add(new_vehicle)
     db.commit()
